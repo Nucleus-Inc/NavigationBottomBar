@@ -85,3 +85,20 @@ We can also set these values programatically by using the following methods:
         android:title="@string/menu_item5"/>
 </menu>
 ```
+It’s important to note that the maximum number of items we can display is 5.
+
+### Handling Enabled / Disabled states
+
+To make the view handle these cases we only simply need to create a selector file for our enabled / disabled colors.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:color="@color/colorAccent"
+        android:state_checked="false"/>
+    <item
+        android:color="@color/colorPrimary"
+        android:state_checked="true"/>
+</selector>
+```
