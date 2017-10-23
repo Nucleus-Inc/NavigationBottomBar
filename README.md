@@ -34,13 +34,14 @@ compile 'com.android.support:support-v4:26.+'
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/white"
+        app:itemBackground="@android:color/white"
         app:itemIconTint="@color/tinting_selected_items"
         app:itemTextColor="@color/tinting_selected_items"
         app:menu="@menu/bottombar_items"/>
 
 </RelativeLayout>
 ```
+
 You’ll notice that the widget has a couple of attributes set on it:
 
    * **app:itemBackground:** The background color to be used for the bottom navigation menu
@@ -48,5 +49,39 @@ You’ll notice that the widget has a couple of attributes set on it:
    * **app:itemTextColor:** The color to be used for the text in the bottom navigation menu
    * **app:menu:** The menu resource to be used to display items in the bottom navigation menu
 
+We can also set these values programatically by using the following methods:
+
+   * **inflateMenu(int menuResource):** Inflate a menu for the bottom navigation view using a menu resource identifier
+   * **setItemBackgroundResource(int backgroundResource):** The background to be used for the menu items.
+   * **setItemTextColor(ColorStateList colorStateList):** A ColorStateList used to color the text used for the menu items
+   * **setItemIconTintList(ColorStateList colorStateList):** A ColorStateList used to tint the icons used for the menu items
+
 ### Create a menu to display
 
+**menu/bottombar_itens.xml**
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item1"
+        android:icon="@drawable/home"
+        android:title="@string/menu_item1"/>
+    <item
+        android:id="@+id/menu_item2"
+        android:icon="@drawable/search"
+        android:title="@string/menu_item2"/>
+    <item
+        android:id="@+id/menu_item3"
+        android:icon="@drawable/play"
+        android:title="@string/menu_item3"/>
+    <item
+        android:id="@+id/menu_item4"
+        android:icon="@drawable/favorite"
+        android:title="@string/menu_item4"/>
+    <item
+        android:id="@+id/menu_item5"
+        android:icon="@drawable/user"
+        android:title="@string/menu_item5"/>
+</menu>
+```
