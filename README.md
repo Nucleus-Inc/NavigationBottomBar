@@ -114,7 +114,6 @@ Now we’ve implemented our menu we need to be able to react when it’s interac
 private lateinit var bottomNavigationView: BottomNavigationView
 
 bottomNavigationView = findViewById(R.id.navigation)
-BottomNavigationViewHelper.disableShiftMode(bottomNavigationView)
 
 supportFragmentManager.beginTransaction().replace(R.id.framelayout,Fragment3()).commit()
 bottomNavigationView.selectedItemId = R.id.menu_item3
@@ -135,6 +134,33 @@ bottomNavigationView.setOnNavigationItemSelectedListener { item ->
 }
 ```
 
+## Features Extras
+
+We created a file called **BottomNavigationViewHelper.kt** where all the features are implemented. 
+
+### Remove Animation
+
+To remove the animation, simply call the **disableShiftMode** function by passing an instance of the bottomNavigationView per parameter:
+
+**MainActivity.kt**
+
+```kotlin
+
+BottomNavigationViewHelper.disableShiftMode(bottomNavigationView)
+
+```
+
+### Remove Text Label
+
+To remove the text label, simply call the **removeTextLabel** function by passing an instance of the bottomNavigationView per parameter:
+
+**MainActivity.kt**
+
+```kotlin
+
+BottomNavigationViewHelper.removeTextLabel(bottomNavigationView)
+
+```
 
 ## Contributions
 
