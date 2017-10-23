@@ -43,7 +43,7 @@ compile 'com.android.support:support-v4:26.+'
 ```
 You’ll notice that the widget has a couple of attributes set on it:
 
-* app:itemBackground — The background color to be used for the bottom navigation menu
-* app:itemIconTint — The tint to be used for the icons in the bottom navigation menu
-* app:itemTextColor — The color to be used for the text in the bottom navigation menu
-* app:menu — The menu resource to be used to display items in the bottom navigation menu
+   * **app:itemBackground** — The background color to be used for the bottom navigation menu
+   * **app:itemIconTint** — The tint to be used for the icons in the bottom navigation menu
+   * **app:itemTextColor** — The color to be used for the text in the bottom navigation menu
+   * **app:menu** — The menu resource to be used to display items in the bottom navigation menu
