@@ -106,9 +106,11 @@ To make the view handle these cases we only simply need to create a selector fil
 ```
 ### Listen for click events
 
-Now we’ve implemented our menu we need to be able to react when it’s interacted with. We can use the BottomNavigationView setOnNavigationItemSelectedListener() method to set a listener for menu item events:
+Now we’ve implemented our menu we need to be able to react when it’s interacted with. We can use the BottomNavigationView **setOnNavigationItemSelectedListener** method to set a listener for menu item events:
 
 ```kotlin
+private lateinit var bottomNavigationView: BottomNavigationView
+
 bottomNavigationView = findViewById(R.id.navigation)
 BottomNavigationViewHelper.disableShiftMode(bottomNavigationView)
 
