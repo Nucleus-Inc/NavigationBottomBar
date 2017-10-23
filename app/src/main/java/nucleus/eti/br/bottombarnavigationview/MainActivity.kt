@@ -24,16 +24,18 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             var selectedFragment: Fragment? = null
-            when (item.itemId) {
-                R.id.menu_item1 -> selectedFragment = Fragment1()
-                R.id.menu_item2 -> selectedFragment = Fragment2()
-                R.id.menu_item3 -> selectedFragment = Fragment3()
-                R.id.menu_item4 -> selectedFragment = Fragment4()
-                R.id.menu_item5 -> selectedFragment = Fragment5()
+            if(bottomNavigationView.selectedItemId != item.itemId) {
+                when (item.itemId) {
+                    R.id.menu_item1 -> selectedFragment = Fragment1()
+                    R.id.menu_item2 -> selectedFragment = Fragment2()
+                    R.id.menu_item3 -> selectedFragment = Fragment3()
+                    R.id.menu_item4 -> selectedFragment = Fragment4()
+                    R.id.menu_item5 -> selectedFragment = Fragment5()
+                }
+                val transaction = supportFragmentManager.beginTransaction()
+                transaction.replace(R.id.framelayout, selectedFragment)
+                transaction.commit()
             }
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.framelayout, selectedFragment)
-            transaction.commit()
             true
         }
     }
