@@ -174,6 +174,39 @@ BottomNavigationViewHelper.sizeIcon(bottomNavigationView,resources.displayMetric
 
 ```
 
+### Badges
+
+**layout/badge.xml
+
+```xml
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/notifications.badge"
+        android:layout_width="wrap_content"
+        android:minWidth="20dp"
+        android:layout_height="wrap_content"
+        android:minHeight="20dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/notification_badge"
+        android:gravity="center"
+        android:text="@string/notification_badge"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+</FrameLayout>
+```
+
+**MainActivity.kt**
+
+```kotlin
+
+BottomNavigationViewHelper.addBadge(bottomNavigationView,this,3)
+
+```
+
 ## Contributions
 
 Pull requests for new features, bug fixes, and suggestions are welcome!
