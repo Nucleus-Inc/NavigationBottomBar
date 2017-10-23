@@ -176,7 +176,9 @@ BottomNavigationViewHelper.sizeIcon(bottomNavigationView,resources.displayMetric
 
 ### Badges
 
-**layout/badge.xml
+To add a badge to the bottom bar the first step is to create a layout for it:
+
+**layout/badge.xml**
 
 ```xml
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -198,6 +200,8 @@ BottomNavigationViewHelper.sizeIcon(bottomNavigationView,resources.displayMetric
         android:textSize="12sp" />
 </FrameLayout>
 ```
+
+Afterm to add badge, simply call the **addBadge** function by passing as instance of the bottomNavigationView, an activity and a position value that you want to add your badge:
 
 **MainActivity.kt**
 
