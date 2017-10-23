@@ -4,7 +4,7 @@
  
 ## Introduction
 
-The Bottom Navigation View has been in the material design guidelines for some time, but it hasn’t been easy for us to implement it into our apps. Some applications have built their own solutions, whilst others have relied on third-party open-source libraries to get the job done. Now the design support library is seeing the addition of this bottom navigation bar, let’s take a dive into how we can use it!
+The Bottom Navigation View has been in the material design guidelines for some time, but it hasn’t been easy for us to implement it into our apps. Some applications have built their own solutions, whilst others have relied on third-party open-source libraries to get the job done. Now the design support library is seeing the addition of this bottom navigation bar, let’s take a dive into how we can use it and modify!
 
 ## How to use?
 
@@ -51,10 +51,10 @@ You’ll notice that the widget has a couple of attributes set on it:
 
 We can also set these values programatically by using the following methods:
 
-   * **inflateMenu(int menuResource):** Inflate a menu for the bottom navigation view using a menu resource identifier
-   * **setItemBackgroundResource(int backgroundResource):** The background to be used for the menu items.
-   * **setItemTextColor(ColorStateList colorStateList):** A ColorStateList used to color the text used for the menu items
-   * **setItemIconTintList(ColorStateList colorStateList):** A ColorStateList used to tint the icons used for the menu items
+   * **inflateMenu(int menuResource):**  Inflate a menu for the bottom navigation view using a menu resource identifier
+   * **setItemBackgroundResource(int backgroundResource):**  The background to be used for the menu items.
+   * **setItemTextColor(ColorStateList colorStateList):**  A ColorStateList used to color the text used for the menu items
+   * **setItemIconTintList(ColorStateList colorStateList):**  A ColorStateList used to tint the icons used for the menu items
 
 ### Create a menu to display
 
@@ -103,4 +103,30 @@ To make the view handle these cases we only simply need to create a selector fil
         android:color="@color/colorPrimary"
         android:state_checked="true"/>
 </selector>
+```
+### Listen for click events
+
+Now we’ve implemented our menu we need to be able to react when it’s interacted with. We can use the BottomNavigationView setOnNavigationItemSelectedListener() method to set a listener for menu item events:
+
+```kotlin
+bottomNavigationView = findViewById(R.id.navigation)
+BottomNavigationViewHelper.disableShiftMode(bottomNavigationView)
+
+supportFragmentManager.beginTransaction().replace(R.id.framelayout,Fragment3()).commit()
+bottomNavigationView.selectedItemId = R.id.menu_item3
+
+bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+    var selectedFragment: Fragment? = null
+    when (item.itemId) {
+        R.id.menu_item1 -> selectedFragment = Fragment1()
+        R.id.menu_item2 -> selectedFragment = Fragment2()
+        R.id.menu_item3 -> selectedFragment = Fragment3()
+        R.id.menu_item4 -> selectedFragment = Fragment4()
+        R.id.menu_item5 -> selectedFragment = Fragment5()
+    }
+    val transaction = supportFragmentManager.beginTransaction()
+    transaction.replace(R.id.framelayout, selectedFragment)
+    transaction.commit()
+    true
+}
 ```
