@@ -27,35 +27,8 @@ compile 'com.android.support:support-v4:26.+'
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.eti.nucleus.bottombarnavigationview.MainActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/toolbar_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/nucleus" />
-
-        </RelativeLayout>
-
-    </android.support.v7.widget.Toolbar>
-
-    <FrameLayout
-        android:id="@+id/framelayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"/>
-
+    <!-- Content Container -->
+ 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
@@ -68,3 +41,9 @@ compile 'com.android.support:support-v4:26.+'
 
 </RelativeLayout>
 ```
+You’ll notice that the widget has a couple of attributes set on it:
+
+* app:itemBackground — The background color to be used for the bottom navigation menu
+* app:itemIconTint — The tint to be used for the icons in the bottom navigation menu
+* app:itemTextColor — The color to be used for the text in the bottom navigation menu
+* app:menu — The menu resource to be used to display items in the bottom navigation menu
