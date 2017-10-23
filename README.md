@@ -201,7 +201,7 @@ To add a badge to the bottom bar the first step is to create a layout for it:
 </FrameLayout>
 ```
 
-Afterm to add badge, simply call the **addBadge** function by passing as instance of the bottomNavigationView, an activity and a position value that you want to add your badge:
+After, to add badge, simply call the **addBadge** function by passing as instance of the bottomNavigationView, an activity and a position value that you want to add your badge:
 
 **MainActivity.kt**
 
@@ -238,4 +238,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Contact
+
+Nucleus.eti <suporte@nucleus.eti.br>
++55 85 3025-4949 <phone number>
++55 85 99872-6251 <whatsapp>
+@nucleus.eti <Instagram>
 
