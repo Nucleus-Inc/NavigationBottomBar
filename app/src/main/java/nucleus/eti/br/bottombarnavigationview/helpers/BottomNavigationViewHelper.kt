@@ -14,9 +14,6 @@ import android.view.LayoutInflater
 import android.util.TypedValue
 import android.util.DisplayMetrics
 
-
-
-
 object BottomNavigationViewHelper {
 
     fun disableShiftMode(view: BottomNavigationView) {

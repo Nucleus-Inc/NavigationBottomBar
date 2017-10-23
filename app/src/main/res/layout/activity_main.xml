@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/white"
+        app:itemBackground="@android:color/white"
         app:itemIconTint="@color/tinting_selected_items"
         app:itemTextColor="@color/tinting_selected_items"
         app:menu="@menu/bottombar_items"/>
