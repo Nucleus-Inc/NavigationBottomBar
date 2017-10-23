@@ -18,9 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView = findViewById(R.id.navigation)
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView)
-       /* BottomNavigationViewHelper.removeTextLabel(bottomNavigationView)
-        BottomNavigationViewHelper.sizeIcon(bottomNavigationView,resources.displayMetrics,28f)*/
-        BottomNavigationViewHelper.addBadge(bottomNavigationView,this,3)
 
         supportFragmentManager.beginTransaction().replace(R.id.framelayout,Fragment3()).commit()
         bottomNavigationView.selectedItemId = R.id.menu_item3
