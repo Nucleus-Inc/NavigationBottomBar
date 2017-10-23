@@ -91,6 +91,8 @@ It’s important to note that the maximum number of items we can display is 5.
 
 To make the view handle these cases we only simply need to create a selector file for our enabled / disabled colors.
 
+**color/handling_states.xml
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
