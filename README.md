@@ -162,6 +162,18 @@ BottomNavigationViewHelper.removeTextLabel(bottomNavigationView)
 
 ```
 
+### Modify Size Icon
+
+To modify size icon, simply call the **sizeIcon** function by passing as instance of the bottomNavigationView, an resource display metrics and a floating value that you want to change the icon:
+
+**MainActivity.kt**
+
+```kotlin
+
+BottomNavigationViewHelper.sizeIcon(bottomNavigationView,resources.displayMetrics,28f)
+
+```
+
 ## Contributions
 
 Pull requests for new features, bug fixes, and suggestions are welcome!
