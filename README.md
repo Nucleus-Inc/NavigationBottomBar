@@ -5,3 +5,11 @@
 ## Introduction
 
 The Bottom Navigation View has been in the material design guidelines for some time, but it hasn’t been easy for us to implement it into our apps. Some applications have built their own solutions, whilst others have relied on third-party open-source libraries to get the job done. Now the design support library is seeing the addition of this bottom navigation bar, let’s take a dive into how we can use it!
+
+## To begin with we need to update our dependancy
+
+```groovy
+compile 'com.android.support:appcompat-v7:26.+'
+compile 'com.android.support:design:26.+'
+compile 'com.android.support:support-v4:26.+'
+```
